@@ -747,6 +747,7 @@ img {
 
     .about-grid {
         gap: 40px;
+       grid-template-colums: 1fr;
     }
 
     .about-image-decoration {
@@ -1207,6 +1208,8 @@ img {
 .about-section {
     padding: 120px 0;
 
+   overflow-x: hidden;
+
     background: linear-gradient(
         180deg,
         #FCFBFD 0%,
@@ -1372,6 +1375,9 @@ img {
 .about-quote p {
     font-style: italic;
 
+   overflow-wrap: break-world;
+   
+   world-break: break-world;
     color: var(--text);
 
     line-height: 1.8;
