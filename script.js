@@ -1,233 +1,81 @@
-/* ==================================
-   SCROLL REVEAL
-================================== */
+/* ==========================
+   NAVBAR SCROLL EFFECT
+========================== */
 
-const revealElements = document.querySelectorAll('.reveal');
+const header = document.getElementById("header");
 
-const revealObserver = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if(entry.isIntersecting){
-
-            entry.target.classList.add('visible');
-
-            revealObserver.unobserve(entry.target);
-        }
-
-    });
-
-},{
-    threshold: 0.12
-});
-
-revealElements.forEach(element => {
-
-    revealObserver.observe(element);
-
-});
-
-
-/* ==================================
-   NAVBAR SCROLL
-================================== */
-
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', () => {
-
-    if(window.scrollY > 40){
-
-        header.classList.add('scrolled');
-
-    }else{
-
-        header.classList.remove('scrolled');
-
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 30) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
     }
-
 });
 
 
-/* ==================================
-   SCROLL PROGRESS BAR
-================================== */
+/* ==========================
+   ACTIVE NAV LINK
+========================== */
 
-const progressBar = document.querySelector('.scroll-progress');
+const sections = document.querySelectorAll("main section, body > section[id]");
+const navLinks = document.querySelectorAll(".nav-links a");
 
-window.addEventListener('scroll', () => {
-
-    const scrollTop = window.scrollY;
-
-    const documentHeight =
-        document.documentElement.scrollHeight -
-        window.innerHeight;
-
-    const progress =
-        (scrollTop / documentHeight) * 100;
-
-    progressBar.style.width = `${progress}%`;
-
-});
-
-
-/* ==================================
-   MENÚ HAMBURGUESA
-================================== */
-
-const menuToggle = document.querySelector('.menu-toggle');
-
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-
-    navLinks.classList.toggle('open');
-
-    menuToggle.classList.toggle('active');
-
-});
-
-
-/* ==================================
-   CERRAR MENÚ AL HACER CLICK
-================================== */
-
-document.querySelectorAll('.nav-links a')
-.forEach(link => {
-
-    link.addEventListener('click', () => {
-
-        navLinks.classList.remove('open');
-
-        menuToggle.classList.remove('active');
-
-    });
-
-});
-
-
-/* ==================================
-   NAV LINK ACTIVO
-================================== */
-
-const sections = document.querySelectorAll('section');
-
-const links = document.querySelectorAll('.nav-links a');
-
-window.addEventListener('scroll', () => {
-
-    let currentSection = '';
+function updateActiveLink() {
+    let currentSection = "";
 
     sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.offsetHeight;
 
-        const sectionTop =
-            section.offsetTop - 140;
-
-        const sectionHeight =
-            section.offsetHeight;
-
-        if(
+        if (
             window.scrollY >= sectionTop &&
             window.scrollY < sectionTop + sectionHeight
-        ){
-
-            currentSection = section.id;
-
+        ) {
+            currentSection = section.getAttribute("id");
         }
-
     });
 
-    links.forEach(link => {
+    navLinks.forEach(link => {
+        link.classList.remove("active");
 
-        link.classList.remove('active');
+        const href = link.getAttribute("href");
 
-        const href = link.getAttribute('href');
-
-        if(href === `#${currentSection}`){
-
-            link.classList.add('active');
-
+        if (href === `#${currentSection}`) {
+            link.classList.add("active");
         }
-
     });
-
-});
-
-
-/* ==================================
-   HOVER PARALLAX HERO
-================================== */
-
-const hero = document.querySelector('.hero');
-
-const orbs = document.querySelectorAll('.hero-orb');
-
-if(hero){
-
-    hero.addEventListener('mousemove', (e) => {
-
-        const x = e.clientX / window.innerWidth;
-        const y = e.clientY / window.innerHeight;
-
-        orbs.forEach((orb, index) => {
-
-            const speed = (index + 1) * 18;
-
-            orb.style.transform = `
-                translate(
-                    ${x * speed}px,
-                    ${y * speed}px
-                )
-            `;
-
-        });
-
-    });
-
 }
 
-
-/* ==================================
-   HERO CARD FLOAT
-================================== */
-
-const heroCard = document.querySelector('.hero-card');
-
-if(heroCard){
-
-    window.addEventListener('mousemove', (e) => {
-
-        const x =
-            (e.clientX / window.innerWidth - 0.5) * 8;
-
-        const y =
-            (e.clientY / window.innerHeight - 0.5) * 8;
-
-        heroCard.style.transform =
-            `translate(${x}px, ${y}px)`;
-
-    });
-
-}
+window.addEventListener("scroll", updateActiveLink);
+window.addEventListener("load", updateActiveLink);
 
 
-/* ==================================
-   BOTÓN VOLVER ARRIBA
-================================== */
+/* ==========================
+   SMOOTH SCROLL OFFSET
+========================== */
 
-document.querySelectorAll('a[href="#inicio"]')
-.forEach(link => {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-    link.addEventListener('click', (e) => {
+    anchor.addEventListener("click", function (e) {
+
+        const targetId = this.getAttribute("href");
+
+        if (targetId === "#") return;
+
+        const target = document.querySelector(targetId);
+
+        if (!target) return;
 
         e.preventDefault();
 
+        const headerHeight = header.offsetHeight;
+
+        const targetPosition =
+            target.offsetTop - headerHeight - 20;
+
         window.scrollTo({
-
-            top: 0,
-
-            behavior: 'smooth'
-
+            top: targetPosition,
+            behavior: "smooth"
         });
 
     });
@@ -235,25 +83,71 @@ document.querySelectorAll('a[href="#inicio"]')
 });
 
 
-/* ==================================
-   PREVENIR ERRORES SI NO HAY LINKS
-================================== */
+/* ==========================
+   FUTURE FEATURES READY
+========================== */
 
-if(!progressBar){
+/*
+Aquí añadiremos más adelante:
 
-    console.warn(
-        'No se encontró .scroll-progress'
-    );
+- Menú hamburguesa.
+- Animaciones al hacer scroll.
+- Filtros del portafolio.
+- Lightbox para ilustraciones.
+- Formulario de contacto.
+*/
+
+/* ==========================
+   TARO INTERACTIVE EFFECT
+========================== */
+
+const character = document.querySelector(".hero-character");
+const floatingElements = document.querySelectorAll(".floating");
+
+if (character) {
+
+    character.addEventListener("mousemove", (e) => {
+
+        const rect = character.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateY = ((x - centerX) / centerX) * 8;
+        const rotateX = ((y - centerY) / centerY) * -8;
+
+        character.style.transform = `
+            perspective(1000px)
+            rotateX(${rotateX}deg)
+            rotateY(${rotateY}deg)
+            scale(1.03)
+            translateY(-10px)
+        `;
+
+        floatingElements.forEach((element, index) => {
+
+            const offset = (index + 1) * 2;
+
+            element.style.transform = `
+                translateY(-${offset * 2}px)
+                translateX(${rotateY}px)
+            `;
+        });
+
+    });
+
+
+    character.addEventListener("mouseleave", () => {
+
+        character.style.transform = "";
+
+        floatingElements.forEach(element => {
+            element.style.transform = "";
+        });
+
+    });
 
 }
-
-
-/* ==================================
-   INICIALIZACIÓN
-================================== */
-
-window.addEventListener('load', () => {
-
-    document.body.classList.add('loaded');
-
-});
