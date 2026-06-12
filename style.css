@@ -598,238 +598,7 @@ img {
 }
 
 
-/* ==========================
-   RESPONSIVE
-========================== */
 
-@media (max-width: 992px) {
-
-    .hero {
-        grid-template-columns: 1fr;
-
-        text-align: center;
-    }
-
-    .hero-content p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .illustration-circle {
-        width: 420px;
-        height: 420px;
-    }
-
-    .nav-links {
-        gap: 25px;
-    }
-
-    .portafolio-grid {
-        gap: 25px;
-    }
-
-    .services-grid {
-        gap: 25px;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-
-        gap: 60px;
-    }
-
-    .about-image-wrapper {
-        max-width: 500px;
-
-        margin: 0 auto;
-    }
-
-    .contact-info {
-        gap: 25px;
-    }
-}
-
-
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-
-        gap: 18px;
-    }
-
-    .nav-button {
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero {
-        padding: 50px 0;
-    }
-
-    .hero-content h1 {
-        font-size: clamp(3rem, 14vw, 4.5rem);
-    }
-
-    .illustration-circle {
-        width: 320px;
-        height: 320px;
-    }
-
-    .character-placeholder {
-        width: 230px;
-        height: 230px;
-
-        padding: 20px;
-    }
-
-    .placeholder-icon {
-        font-size: 3rem;
-    }
-
-    .logo-image {
-        height: 55px;
-    }
-
-    .portfolio-section {
-        padding: 90px 0;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-header {
-        margin-bottom: 50px;
-    }
-
-    .portfolio-info {
-        padding: 24px;
-    }
-
-    .portfolio-info h3 {
-        font-size: 1.3rem;
-    }
-
-     .services-section {
-        padding: 90px 0;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-card-featured {
-        grid-column: auto;
-    }
-
-    .service-card {
-        padding: 28px;
-    }
-
-    .service-content h3 {
-        font-size: 1.4rem;
-    }
-
-     .about-section {
-        padding: 90px 0;
-    }
-
-    .about-grid {
-        gap: 40px;
-       grid-template-colums: 1fr;
-    }
-
-    .about-image-decoration {
-        top: 15px;
-        left: 15px;
-    }
-
-    .about-content h2 {
-        margin: 15px 0 25px;
-    }
-
-    .about-tags {
-        margin: 30px 0;
-    }
-
-    .about-tags span {
-        font-size: 0.85rem;
-
-        padding: 10px 16px;
-    }
-
-    .contact-section {
-        padding: 90px 0;
-    }
-
-    .contact-description {
-        margin-bottom: 45px;
-    }
-
-    .contact-info {
-        flex-direction: column;
-
-        gap: 30px;
-    }
-
-    .contact-buttons {
-        flex-direction: column;
-
-        align-items: center;
-    }
-
-    .contact-buttons .btn {
-        width: 100%;
-
-        max-width: 320px;
-    }
-
-    .footer .container {
-        flex-direction: column;
-
-        text-align: center;
-    }
-}
-
-
-@media (max-width: 480px) {
-
-    .logo {
-        font-size: 1.7rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
-    .illustration-circle {
-        width: 280px;
-        height: 280px;
-    }
-
-    .blob {
-        filter: blur(70px);
-    }
-
-    .logo-image {
-        height: 45px;
-    }
-}
 
 /* ==========================
    PORTFOLIO SECTION
@@ -1234,6 +1003,7 @@ img {
 
 .about-image-wrapper {
     position: relative;
+    overflow: hidden;
 }
 
 .about-image-decoration {
@@ -1283,6 +1053,9 @@ img {
 /* ==========================
    CONTENIDO
 ========================== */
+
+.about-content {
+    min-width: 0;
 
 .about-content h2 {
     font-family: "Bebas Neue", sans-serif;
@@ -1377,7 +1150,7 @@ img {
 
    overflow-wrap: break-world;
    
-   world-break: break-world;
+    world-break: break-world;
     color: var(--text);
 
     line-height: 1.8;
@@ -1592,4 +1365,236 @@ img {
     color: var(--text-light);
 
     font-size: 0.95rem;
+}
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 992px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .illustration-circle {
+        width: 420px;
+        height: 420px;
+    }
+
+    .nav-links {
+        gap: 25px;
+    }
+
+    .portafolio-grid {
+        gap: 25px;
+    }
+
+    .services-grid {
+        gap: 25px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .about-image-wrapper {
+        max-width: 500px;
+
+        margin: 0 auto;
+    }
+
+    .contact-info {
+        gap: 25px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: 18px;
+    }
+
+    .nav-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(3rem, 14vw, 4.5rem);
+    }
+
+    .illustration-circle {
+        width: 320px;
+        height: 320px;
+    }
+
+    .character-placeholder {
+        width: 230px;
+        height: 230px;
+
+        padding: 20px;
+    }
+
+    .placeholder-icon {
+        font-size: 3rem;
+    }
+
+    .logo-image {
+        height: 55px;
+    }
+
+    .portfolio-section {
+        padding: 90px 0;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        margin-bottom: 50px;
+    }
+
+    .portfolio-info {
+        padding: 24px;
+    }
+
+    .portfolio-info h3 {
+        font-size: 1.3rem;
+    }
+
+     .services-section {
+        padding: 90px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card-featured {
+        grid-column: auto;
+    }
+
+    .service-card {
+        padding: 28px;
+    }
+
+    .service-content h3 {
+        font-size: 1.4rem;
+    }
+
+     .about-section {
+        padding: 90px 0;
+    }
+
+    .about-grid {
+        gap: 40px;
+       grid-template-colums: 1fr;
+    }
+
+    .about-image-decoration {
+        top: 10px;
+        left: 10px
+    }
+
+    .about-content h2 {
+        margin: 15px 0 25px;
+    }
+
+    .about-tags {
+        margin: 30px 0;
+    }
+
+    .about-tags span {
+        font-size: 0.85rem;
+
+        padding: 10px 16px;
+    }
+
+    .contact-section {
+        padding: 90px 0;
+    }
+
+    .contact-description {
+        margin-bottom: 45px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .contact-buttons .btn {
+        width: 100%;
+
+        max-width: 320px;
+    }
+
+    .footer .container {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 1.7rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .illustration-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .blob {
+        filter: blur(70px);
+    }
+
+    .logo-image {
+        height: 45px;
+    }
 }
