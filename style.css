@@ -1612,3 +1612,55 @@ img {
         height: 45px;
     }
 }
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+
+        position: fixed;
+
+        top: 80px;
+        left: 0;
+
+        width: 100%;
+
+        background: rgba(252, 251, 253, 0.98);
+
+        backdrop-filter: blur(12px);
+
+        padding: 30px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 25px;
+
+        transform: translateY(-120%);
+
+        opacity: 0;
+
+        pointer-events: none;
+
+        transition: all 0.3s ease;
+
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+
+        opacity: 1;
+
+        pointer-events: auto;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+
+        text-align: center;
+    }
+}
