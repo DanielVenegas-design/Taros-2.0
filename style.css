@@ -357,6 +357,16 @@ button{
     width:100%;
 }
 
+.nav-links a.active{
+
+    color: var(--lavender);
+}
+
+.nav-links a.active::after{
+
+    width: 100%;
+}
+
 
 /* ==========================
    MENÚ HAMBURGUESA
@@ -384,6 +394,24 @@ button{
     transition:var(--transition);
 }
 
+.menu-toggle.active span:nth-child(1){
+
+    transform:
+        translateY(8px)
+        rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2){
+
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3){
+
+    transform:
+        translateY(-8px)
+        rotate(-45deg);
+}
 
 /* ==========================
    HERO
