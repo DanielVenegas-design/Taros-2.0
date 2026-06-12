@@ -1,31 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+    <!-- Configuración básica -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SEO -->
     <title>Taro's Design & Illustration</title>
 
-    <meta name="description"
-        content="Portafolio de Taro. Diseño gráfico, ilustración y dirección creativa para marcas que buscan conectar a través de experiencias visuales auténticas.">
-
-    <meta name="keywords"
-        content="Diseño gráfico, ilustración, branding, UX/UI, dirección creativa, portafolio">
-
-    <meta name="author" content="Taro">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Taro's Design & Illustration">
-    <meta property="og:description"
-        content="Diseño gráfico, ilustración y experiencias visuales con personalidad.">
-    <meta property="og:type" content="website">
+    <meta
+        name="description"
+        content="Ilustraciones y diseño con personalidad. Taro transforma ideas en experiencias visuales memorables para marcas, creadores y proyectos creativos."
+    >
 
     <!-- Tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Delius&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -33,32 +25,32 @@
 
 <body>
 
-    <!-- Barra de progreso -->
-    <div class="scroll-progress"></div>
+    <!-- =========================
+         FONDO DECORATIVO
+    ========================== -->
+
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
 
 
     <!-- =========================
-            NAVBAR
+         HEADER / NAVBAR
     ========================== -->
 
-    <header class="header">
+    <header class="header" id="header">
 
         <nav class="navbar container">
 
-            <a href="#inicio" class="logo">
-
-                <!-- Logo temporal -->
-                <div class="logo-mark">
-                    T
-                </div>
-
-                <div class="logo-text">
-                    Taro's
-                    <span>Design & Illustration</span>
-                </div>
-
+            <!-- Logo Placeholder -->
+            <a href="#" class="logo">
+                <img src="img/logo texto rosa.png" alt="Taros design & illustration" class="logo-image">
             </a>
 
+
+            <!-- Menú -->
             <ul class="nav-links">
 
                 <li>
@@ -66,15 +58,15 @@
                 </li>
 
                 <li>
-                    <a href="#proyectos">Proyectos</a>
+                    <a href="#portafolio">Portafolio</a>
                 </li>
 
                 <li>
-                    <a href="#proceso">Proceso</a>
+                    <a href="#servicios">Servicios</a>
                 </li>
 
                 <li>
-                    <a href="#sobre">Sobre mí</a>
+                    <a href="#sobre-mi">Sobre mí</a>
                 </li>
 
                 <li>
@@ -84,14 +76,10 @@
             </ul>
 
 
-            <!-- Menú móvil -->
-            <button class="menu-toggle" aria-label="Abrir menú">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
+            <!-- CTA -->
+            <a href="#contacto" class="nav-button">
+                ✦ Trabajemos juntos
+            </a>
 
         </nav>
 
@@ -99,56 +87,48 @@
 
 
     <!-- =========================
-              HERO
+         HERO
     ========================== -->
 
-    <section class="hero" id="inicio">
+    <main>
 
-        <!-- Decoraciones -->
-        <div class="hero-orb hero-orb-1"></div>
-        <div class="hero-orb hero-orb-2"></div>
-
-        <div class="container hero-content">
+        <section class="hero container" id="inicio">
 
             <!-- Texto -->
-            <div class="hero-text reveal">
+            <div class="hero-content">
 
-                <p class="hero-label">
+                <span class="hero-tag">
+                    TARO'S DESIGN & ILLUSTRATION
+                </span>
 
-                    Diseño gráfico · Ilustración · Dirección creativa
 
-                </p>
-
-                <h1 class="hero-title">
-
-                    Diseño experiencias visuales que cuentan historias.
-
+                <h1>
+                    Diseño e ilustraciones
+                    <span>que cuentan historias</span>
                 </h1>
 
-                <p class="hero-description">
 
-                    En Taro's transformo ideas en experiencias visuales
-                    auténticas a través del diseño, la ilustración y
-                    la sensibilidad creativa.
+                <p>
+                    Transformo ideas en experiencias visuales memorables
+                    para marcas, creadores y proyectos que buscan conectar
+                    con su audiencia a través de una identidad auténtica
+                    y cercana.
+                </p>
 
-                    Mi objetivo es crear proyectos que conecten,
-                    emocionen y permanezcan en la memoria.
 
+                <p class="hero-question">
+                    ¿Creamos algo increíble juntos?
                 </p>
 
 
                 <div class="hero-buttons">
 
-                    <a href="#proyectos" class="btn btn-primary">
-
-                        Ver proyectos
-
+                    <a href="#portafolio" class="btn btn-primary">
+                        Ver portafolio
                     </a>
 
                     <a href="#contacto" class="btn btn-secondary">
-
-                        Trabajemos juntas
-
+                        Hablemos
                     </a>
 
                 </div>
@@ -156,885 +136,521 @@
             </div>
 
 
-            <!-- Visual -->
-            <div class="hero-visual reveal">
+            <!-- Ilustración -->
+            <div class="hero-illustration">
 
-                <div class="hero-card">
+                <div class="illustration-circle">
 
-                    <div class="hero-card-inner">
-
-                        <p class="hero-card-label">
-
-                            ESTUDIO CREATIVO
-
-                        </p>
-
-                        <h2>
-
-                            Branding,
-                            ilustración y diseño con intención.
-
-                        </h2>
-
-                        <p>
-
-                            Cada proyecto nace desde la empatía,
-                            la exploración y el deseo de crear
-                            experiencias visuales memorables.
-
-                        </p>
-
-                    </div>
-
-                </div>
+                    <!-- Decoraciones -->
+                    <span class="floating floating-star star-1">✦</span>
+                    <span class="floating floating-heart heart-1">♡</span>
+                    <span class="floating floating-star star-2">✦</span>
+                    <span class="floating floating-heart heart-2">♡</span>
 
 
-                <!-- Tags -->
-                <div class="floating-tag tag-1">
+                    <!-- Placeholder -->
+                     <div class="character-wrapper">
 
-                    Branding
+                        <img src="img/logo taro rosa.png" alt="Ilustracion de taro" class="hero-character">
 
-                </div>
-
-                <div class="floating-tag tag-2">
-
-                    Illustration
-
-                </div>
-
-                <div class="floating-tag tag-3">
-
-                    UX/UI
-
-                </div>
-
-                <div class="floating-tag tag-4">
-
-                    Editorial
+                     </div>
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
-
-        <!-- Scroll -->
-        <div class="scroll-indicator">
-
-            <span></span>
-
-            Explorar
-
-        </div>
-
-    </section>
-        <!-- =========================
-            PROYECTOS
-    ========================== -->
-
-    <section class="projects section" id="proyectos">
-
-        <div class="container">
-
-            <div class="section-heading reveal">
-
-                <p class="section-label">
-                    Portafolio
-                </p>
-
-                <h2 class="section-title">
-
-                    Proyectos seleccionados.
-
-                </h2>
-
-                <p class="section-description">
-
-                    Una selección de trabajos que reflejan mi manera
-                    de entender el diseño: funcional, emocional
-                    y con identidad propia.
-
-                </p>
-
-            </div>
-
-
-            <div class="projects-grid">
-
-                <!-- Proyecto 1 -->
-                <article class="project-card reveal">
-
-                    <div class="project-image placeholder-project card-1">
-
-                        <span>🎨</span>
-
-                    </div>
-
-                    <div class="project-content">
-
-                        <p class="project-category">
-                            Identidad de marca
-                        </p>
-
-                        <h3 class="project-title">
-                            Marca Propia
-                        </h3>
-
-                        <p class="project-description">
-
-                            Desarrollo de una identidad visual
-                            que representa personalidad, coherencia
-                            y autenticidad.
-
-                        </p>
-
-                        <a href="#" class="project-link">
-
-                            Ver proyecto →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- Proyecto 2 -->
-                <article class="project-card reveal">
-
-                    <div class="project-image placeholder-project card-2">
-
-                        <span>👟</span>
-
-                    </div>
-
-                    <div class="project-content">
-
-                        <p class="project-category">
-                            Branding
-                        </p>
-
-                        <h3 class="project-title">
-                            Napos Papos
-                        </h3>
-
-                        <p class="project-description">
-
-                            Creación de una identidad divertida,
-                            cercana y memorable para una marca
-                            con mucha personalidad.
-
-                        </p>
-
-                        <a href="#" class="project-link">
-
-                            Ver proyecto →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- Proyecto 3 -->
-                <article class="project-card reveal">
-
-                    <div class="project-image placeholder-project card-3">
-
-                        <span>✏️</span>
-
-                    </div>
-
-                    <div class="project-content">
-
-                        <p class="project-category">
-                            Ilustración
-                        </p>
-
-                        <h3 class="project-title">
-                            Fan Art
-                        </h3>
-
-                        <p class="project-description">
-
-                            Exploraciones visuales enfocadas
-                            en narrativa, estilo y expresión
-                            artística.
-
-                        </p>
-
-                        <a href="#" class="project-link">
-
-                            Ver proyecto →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- Proyecto 4 -->
-                <article class="project-card reveal">
-
-                    <div class="project-image placeholder-project card-4">
-
-                        <span>🧾</span>
-
-                    </div>
-
-                    <div class="project-content">
-
-                        <p class="project-category">
-                            Character Design
-                        </p>
-
-                        <h3 class="project-title">
-                            Ficha de Personaje
-                        </h3>
-
-                        <p class="project-description">
-
-                            Construcción visual de personajes
-                            con atención al detalle y coherencia
-                            narrativa.
-
-                        </p>
-
-                        <a href="#" class="project-link">
-
-                            Ver proyecto →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
+    </main>
 
 
     <!-- =========================
-          PROCESO CREATIVO
+         FUTURAS SECCIONES
     ========================== -->
 
-    <section class="process section" id="proceso">
+    <section class="portfolio-section" id="portafolio">
 
-        <div class="container">
+    <div class="container">
 
-            <div class="section-heading reveal">
+        <div class="section-header">
 
-                <p class="section-label">
+            <span class="section-tag">
+                PORTAFOLIO
+            </span>
 
-                    Metodología
-
-                </p>
-
-                <h2 class="section-title">
-
-                    Mi proceso creativo.
-
-                </h2>
-
-                <p class="section-description">
-
-                    Cada proyecto es diferente, pero siempre
-                    comienza escuchando, explorando y diseñando
-                    con intención.
-
-                </p>
-
-            </div>
-
-
-            <div class="process-grid">
-
-                <div class="process-card reveal">
-
-                    <span class="process-number">
-
-                        01
-
-                    </span>
-
-                    <h3>
-
-                        Descubrir
-
-                    </h3>
-
-                    <p>
-
-                        Comprender objetivos, necesidades
-                        y aquello que hace único a cada proyecto.
-
-                    </p>
-
-                </div>
-
-
-                <div class="process-card reveal">
-
-                    <span class="process-number">
-
-                        02
-
-                    </span>
-
-                    <h3>
-
-                        Explorar
-
-                    </h3>
-
-                    <p>
-
-                        Investigar referencias, generar ideas
-                        y encontrar oportunidades creativas.
-
-                    </p>
-
-                </div>
-
-
-                <div class="process-card reveal">
-
-                    <span class="process-number">
-
-                        03
-
-                    </span>
-
-                    <h3>
-
-                        Diseñar
-
-                    </h3>
-
-                    <p>
-
-                        Transformar conceptos en soluciones
-                        visuales claras y funcionales.
-
-                    </p>
-
-                </div>
-
-
-                <div class="process-card reveal">
-
-                    <span class="process-number">
-
-                        04
-
-                    </span>
-
-                    <h3>
-
-                        Entregar
-
-                    </h3>
-
-                    <p>
-
-                        Refinar cada detalle para presentar
-                        resultados listos para implementarse.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-              SERVICIOS
-    ========================== -->
-
-    <section class="services section">
-
-        <div class="container">
-
-            <div class="section-heading reveal">
-
-                <p class="section-label">
-
-                    Servicios
-
-                </p>
-
-                <h2 class="section-title">
-
-                    Lo que puedo hacer por tu proyecto.
-
-                </h2>
-
-                <p class="section-description">
-
-                    Diseño experiencias visuales que combinan
-                    estrategia, creatividad y sensibilidad estética.
-
-                </p>
-
-            </div>
-
-
-            <div class="services-grid">
-
-                <article class="service-card reveal">
-
-                    <div class="service-icon">
-
-                        🎨
-
-                    </div>
-
-                    <h3>
-
-                        Ilustración Digital
-
-                    </h3>
-
-                    <p>
-
-                        Desarrollo de ilustraciones originales,
-                        personajes y recursos visuales con estilo propio.
-
-                    </p>
-
-                </article>
-
-
-                <article class="service-card reveal">
-
-                    <div class="service-icon">
-
-                        ✦
-
-                    </div>
-
-                    <h3>
-
-                        Branding
-
-                    </h3>
-
-                    <p>
-
-                        Identidades visuales que comunican
-                        personalidad, propósito y diferenciación.
-
-                    </p>
-
-                </article>
-
-
-                <article class="service-card reveal">
-
-                    <div class="service-icon">
-
-                        📱
-
-                    </div>
-
-                    <h3>
-
-                        UX / UI
-
-                    </h3>
-
-                    <p>
-
-                        Interfaces funcionales y atractivas
-                        enfocadas en la experiencia del usuario.
-
-                    </p>
-
-                </article>
-
-
-                <article class="service-card reveal">
-
-                    <div class="service-icon">
-
-                        📸
-
-                    </div>
-
-                    <h3>
-
-                        Fotografía
-
-                    </h3>
-
-                    <p>
-
-                        Captura visual con enfoque narrativo
-                        para potenciar conceptos y marcas.
-
-                    </p>
-
-                </article>
-
-
-                <article class="service-card reveal">
-
-                    <div class="service-icon">
-
-                        📖
-
-                    </div>
-
-                    <h3>
-
-                        Diseño Editorial
-
-                    </h3>
-
-                    <p>
-
-                        Maquetación y sistemas visuales para
-                        publicaciones impresas y digitales.
-
-                    </p>
-
-                </article>
-
-
-                <article class="service-card reveal">
-
-                    <div class="service-icon">
-
-                        🎬
-
-                    </div>
-
-                    <h3>
-
-                        Edición de Video
-
-                    </h3>
-
-                    <p>
-
-                        Piezas audiovisuales que complementan
-                        y fortalecen la narrativa visual.
-
-                    </p>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-        <!-- =========================
-                SOBRE MÍ
-    ========================== -->
-
-    <section class="about section" id="sobre">
-
-        <div class="container about-container">
-
-            <!-- Foto -->
-            <div class="about-image reveal">
-
-                <div class="about-image-frame">
-
-                    <!-- Sustituir después -->
-                    <div class="about-placeholder">
-
-                        <span>🌸</span>
-
-                        <p>
-                            Fotografía de Taro
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Texto -->
-            <div class="about-content reveal">
-
-                <p class="section-label">
-
-                    Sobre mí
-
-                </p>
-
-                <h2 class="section-title">
-
-                    Hola, soy Taro.
-
-                </h2>
-
-                <p class="about-description">
-
-                    Soy diseñadora gráfica e ilustradora, apasionada por crear experiencias visuales con intención.
-
-                    Disfruto explorar nuevas ideas, construir identidades auténticas y desarrollar soluciones que conecten emocionalmente con las personas.
-
-                </p>
-
-                <p class="about-description">
-
-                    Mi trabajo combina sensibilidad estética, pensamiento estratégico y una profunda curiosidad por contar historias a través del diseño.
-
-                </p>
-
-
-                <!-- Estadísticas -->
-
-                <div class="about-stats">
-
-                    <div class="stat-item">
-
-                        <h3>15+</h3>
-
-                        <span>
-                            Proyectos realizados
-                        </span>
-
-                    </div>
-
-                    <div class="stat-item">
-
-                        <h3>6</h3>
-
-                        <span>
-                            Áreas creativas
-                        </span>
-
-                    </div>
-
-                    <div class="stat-item">
-
-                        <h3>∞</h3>
-
-                        <span>
-                            Ideas nuevas
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Herramientas -->
-
-                <div class="tools">
-
-                    <span>Illustrator</span>
-
-                    <span>Photoshop</span>
-
-                    <span>Figma</span>
-
-                    <span>Procreate</span>
-
-                    <span>After Effects</span>
-
-                    <span>Premiere</span>
-
-                    <span>InDesign</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-                CONTACTO
-    ========================== -->
-
-    <section class="contact section" id="contacto">
-
-        <div class="container">
-
-            <div class="contact-box reveal">
-
-                <p class="section-label">
-
-                    Contacto
-
-                </p>
-
-                <h2 class="section-title">
-
-                    ¿Creamos algo increíble juntas?
-
-                </h2>
-
-                <p class="contact-description">
-
-                    Siempre estoy abierta a colaborar en proyectos que busquen conectar con las personas a través del diseño.
-
-                    Si tienes una idea en mente, me encantará escucharla.
-
-                </p>
-
-
-                <!-- Botones -->
-
-                <div class="contact-buttons">
-
-                    <a href="mailto:priv.taide@gmail.com"
-                       class="btn btn-primary">
-
-                        Enviar correo
-
-                    </a>
-
-
-                    <a href="#"
-                       class="btn btn-secondary">
-
-                        Instagram
-
-                    </a>
-
-                </div>
-
-
-                <p class="availability">
-
-                    Disponible para proyectos freelance.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-                FOOTER
-    ========================== -->
-
-    <footer class="footer">
-
-        <div class="container footer-container">
-
-            <div class="footer-brand">
-
-                <h3>
-
-                    Taro's
-
-                </h3>
-
-                <p>
-
-                    Design & Illustration
-
-                </p>
-
-            </div>
-
-
-            <div class="footer-links">
-
-                <a href="#inicio">
-
-                    Inicio
-
-                </a>
-
-                <a href="#proyectos">
-
-                    Proyectos
-
-                </a>
-
-                <a href="#sobre">
-
-                    Sobre mí
-
-                </a>
-
-                <a href="#contacto">
-
-                    Contacto
-
-                </a>
-
-            </div>
-
-
-            <div class="footer-social">
-
-                <a href="#">
-
-                    Behance
-
-                </a>
-
-                <a href="#">
-
-                    Instagram
-
-                </a>
-
-                <a href="#">
-
-                    LinkedIn
-
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
+            <h2>
+                Mis últimos trabajos
+            </h2>
 
             <p>
-
-                © 2026 Taro's Design & Illustration.
-                Todos los derechos reservados.
-
+                Detrás de cada diseño hay una historia, una intención y mucho cariño por los detalles. Aquí encontrarás algunos de mis proyectos más recientes, creados para ayudar a personas y marcas a conectar de una forma auténtica y memorable.
             </p>
 
-            <a href="#inicio">
+        </div>
 
-                Volver arriba ↑
 
+        <div class="portfolio-grid">
+
+            <!-- Proyecto 1 -->
+            <article class="portfolio-card">
+
+                <div class="portfolio-image">
+                    <img src="img/proyecto-1.png" alt="Proyecto 1">
+                </div>
+
+                <div class="portfolio-info">
+                    <span class="portfolio-category">
+                        Branding
+                    </span>
+
+                    <h3>
+                        Marca propia
+                    </h3>
+
+                    <span class="portfolio-arrow">
+                        →
+                    </span>
+                </div>
+
+            </article>
+
+
+            <!-- Proyecto 2 -->
+            <article class="portfolio-card">
+
+                <div class="portfolio-image">
+                    <img src="img/proyecto-2.png" alt="Proyecto 2">
+                </div>
+
+                <div class="portfolio-info">
+                    <span class="portfolio-category">
+                        Branding
+                    </span>
+
+                    <h3>
+                        Napos Papos
+                    </h3>
+
+                    <span class="portfolio-arrow">
+                        →
+                    </span>
+                </div>
+
+            </article>
+
+
+            <!-- Proyecto 3 -->
+            <article class="portfolio-card">
+
+                <div class="portfolio-image">
+                    <img src="img/proyecto-3.png" alt="Proyecto 3">
+                </div>
+
+                <div class="portfolio-info">
+                    <span class="portfolio-category">
+                        Ilustración
+                    </span>
+
+                    <h3>
+                        FanArt
+                    </h3>
+
+                    <span class="portfolio-arrow">
+                        →
+                    </span>
+                </div>
+
+            </article>
+
+
+            <!-- Proyecto 4 -->
+            <article class="portfolio-card">
+
+                <div class="portfolio-image">
+                    <img src="img/proyecto-4.png" alt="Proyecto 4">
+                </div>
+
+                <div class="portfolio-info">
+                    <span class="portfolio-category">
+                        Branding
+                    </span>
+
+                    <h3>
+                        Xiang
+                    </h3>
+
+                    <span class="portfolio-arrow">
+                        →
+                    </span>
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="portfolio-cta">
+
+            <a href="#" class="btn btn-primary">
+                ✦ Ver portafolio completo
             </a>
 
         </div>
 
-    </footer>
+    </div>
+
+</section>
+
+    <!-- ==========================
+     SERVICIOS
+========================== -->
+
+<section class="services-section" id="servicios">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                SERVICIOS
+            </span>
+
+            <h2>
+                ¿Cómo puedo ayudarte?
+            </h2>
+
+            <p>
+                Cada proyecto es diferente, por eso adapto cada proceso a las necesidades de quienes confían en mi trabajo. Ya sea creando ilustraciones llenas de personalidad o diseñando experiencias visuales funcionales, mi objetivo es ayudarte a comunicar tu esencia de una forma auténtica y memorable.
+            </p>
+
+        </div>
 
 
+        <div class="services-grid">
 
-    <!-- JS -->
+            <!-- Ilustración -->
+            <article class="service-card">
+
+                <div class="service-icon">
+                    🎨
+                </div>
+
+                <div class="service-content">
+
+                    <h3>
+                        Ilustración digital y tradicional
+                    </h3>
+
+                    <p>
+                        Ilustraciones creadas para transmitir emociones, contar historias y dar vida a ideas únicas a través de técnicas digitales y tradicionales.
+                    </p>
+
+                </div>
+
+                <span class="service-arrow">
+                    →
+                </span>
+
+            </article>
+
+
+            <!-- Identidad -->
+            <article class="service-card">
+
+                <div class="service-icon">
+                    ✨
+                </div>
+
+                <div class="service-content">
+
+                    <h3>
+                        Identidad de marca
+                    </h3>
+
+                    <p>
+                        Desarrollo de marcas con personalidad propia, desde la conceptualización hasta la construcción de sistemas visuales coherentes y memorables.
+                    </p>
+
+                </div>
+
+                <span class="service-arrow">
+                    →
+                </span>
+
+            </article>
+
+
+            <!-- UX/UI -->
+            <article class="service-card">
+
+                <div class="service-icon">
+                    💻
+                </div>
+
+                <div class="service-content">
+
+                    <h3>
+                        Diseño UX/UI
+                    </h3>
+
+                    <p>
+                        Diseño de experiencias digitales intuitivas y atractivas, enfocadas en la funcionalidad y las necesidades reales de cada usuario.
+                    </p>
+
+                </div>
+
+                <span class="service-arrow">
+                    →
+                </span>
+
+            </article>
+
+
+            <!-- Fotografía -->
+            <article class="service-card">
+
+                <div class="service-icon">
+                    📸
+                </div>
+
+                <div class="service-content">
+
+                    <h3>
+                        Fotografía
+                    </h3>
+
+                    <p>
+                        Creación de imágenes con intención y sensibilidad visual para comunicar, promocionar y conectar de forma auténtica.
+                    </p>
+
+                </div>
+
+                <span class="service-arrow">
+                    →
+                </span>
+
+            </article>
+
+
+            <!-- Editorial -->
+            <article class="service-card service-card-featured">
+
+                <div class="service-icon">
+                    📚
+                </div>
+
+                <div class="service-content">
+
+                    <h3>
+                        Diseño editorial
+                    </h3>
+
+                    <p>
+                        Diseño y composición de publicaciones impresas y digitales que equilibran estética, jerarquía y legibilidad para ofrecer experiencias de lectura memorables.
+                    </p>
+
+                </div>
+
+                <span class="service-arrow">
+                    →
+                </span>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ==========================
+     ABOUT
+========================== -->
+
+<section class="about-section" id="sobre-mi">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <!-- Fotografía -->
+            <div class="about-image-wrapper">
+
+                <div class="about-image-decoration"></div>
+
+                <img
+                    src="img/taro-photo.png"
+                    alt="Fotografía de Taro"
+                    class="about-image"
+                >
+
+            </div>
+
+
+            <!-- Contenido -->
+            <div class="about-content">
+
+                <span class="section-tag">
+                    SOBRE MÍ
+                </span>
+
+                <h2>
+                    Mucho gusto, soy Taro.
+                </h2>
+
+                <div class="about-text">
+
+                    <p>
+                        Soy la mente creativa detrás de Taro's, diseñadora gráfica y digital egresada de la UPAEP. Disfruto convertir ideas en experiencias visuales llenas de intención, personalidad y sensibilidad.
+                    </p>
+
+                    <p>
+                        La ilustración, el branding y el diseño son mis herramientas para crear proyectos auténticos que conecten con las personas y cuenten historias memorables. Me emociona acompañar a cada cliente en el proceso de dar vida a aquello que imagina.
+                    </p>
+
+                    <p class="about-highlight">
+                        Porque las mejores ideas son aquellas que se construyen juntos.
+                    </p>
+
+                </div>
+
+
+                <!-- Especialidades -->
+                <div class="about-tags">
+
+                    <span>✦ Ilustración</span>
+
+                    <span>✦ Branding</span>
+
+                    <span>✦ Diseño Digital</span>
+
+                </div>
+
+
+                <!-- Cita -->
+                <blockquote class="about-quote">
+
+                    <p>
+                        "Si un diseño no se siente en el corazón, lo que dice el cerebro no importa."
+                    </p>
+
+                    <cite>
+                        — April Greiman
+                    </cite>
+
+                </blockquote>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ==========================
+     CONTACTO
+========================== -->
+
+<section class="contact-section" id="contacto">
+
+    <div class="container">
+
+        <div class="contact-content">
+
+            <span class="section-tag">
+                CONTACTO
+            </span>
+
+            <h2>
+                Hagamos realidad tu próxima idea.
+            </h2>
+
+            <p class="contact-description">
+                Ya sea una ilustración, una nueva identidad para tu marca o cualquier proyecto creativo que tengas en mente, estaré encantada de escucharte. Cuéntame un poco sobre tu idea y comencemos a crear algo increíble juntos.
+            </p>
+
+
+            <div class="contact-info">
+
+                <div class="contact-item">
+                    <span class="contact-label">
+                        ✦ Instagram
+                    </span>
+
+                    <a href="#" class="contact-link">
+                        @taros.mx
+                    </a>
+                </div>
+
+
+                <div class="contact-item">
+                    <span class="contact-label">
+                        ✦ Correo
+                    </span>
+
+                    <a href="mailto:hola@taros.mx" class="contact-link">
+                        priv.taide@gmail.com
+                    </a>
+                </div>
+
+
+                <div class="contact-item">
+                    <span class="contact-label">
+                        ✦ Ubicación
+                    </span>
+
+                    <span class="contact-text">
+                        Puebla, México
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="contact-buttons">
+
+                <a href="mailto:hola@taros.mx" class="btn btn-primary">
+                    Hablemos de tu proyecto →
+                </a>
+
+                <a href="#" class="btn btn-secondary">
+                    Ver Instagram
+                </a>
+
+            </div>
+
+
+            <p class="contact-closing">
+                Gracias por visitar este pequeño rincón creativo.
+                Espero que pronto podamos crear algo increíble juntos.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="container">
+
+        <p>
+            © 2026 Taro's Design & Illustration
+        </p>
+
+        <p>
+            Diseñado con mucho cariño.
+        </p>
+
+    </div>
+
+</footer>
+
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>
-
 </html>
