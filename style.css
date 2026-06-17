@@ -62,8 +62,14 @@ img {
 ========================== */
 
 .container {
-    width: min(90%, 1200px);
+    width: 100%;
+    max-width: 1200px;
+
     margin: 0 auto;
+
+    padding: 0 24px;
+
+    box-sizing: border-box;
 }
 
 
@@ -126,9 +132,13 @@ img {
 
     z-index: 1000;
 
-    padding: 20px 0;
-
     transition: var(--transition);
+
+    background: rgba(252, 251, 253, 0.92);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(127, 119, 183, 0.08);
 }
 
 .header.scrolled {
@@ -189,6 +199,7 @@ img {
 
     z-index: 1001;
 }
+
 
 /* ==========================
    MENÚ
@@ -612,7 +623,171 @@ img {
 }
 
 
+/* ==========================
+   RESPONSIVE
+========================== */
 
+@media (max-width: 992px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .illustration-circle {
+        width: 420px;
+        height: 420px;
+    }
+    .nav-links {   
+        gap: 25px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+
+        background: rgba(252, 251, 253, 0.98);
+
+        backdrop-filter: blur(12px);
+
+        padding: 100px 30px 30px;
+
+        display: flex;
+        flex-direction: column;
+
+        transform: translateY(-10px);
+
+        opacity: 0;
+
+        pointer-events: none;
+
+        transition:
+            transform 0,3s ease,
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+
+        z-index: 1000;
+
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: 25px;
+
+        box-sizing: border-box;
+
+        visibility: hidden;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+
+        opacity: 1;
+
+        pointer-events: auto;
+
+        visibility: visible;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+
+        text-align: center;
+    }
+
+    .nav-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(3rem, 14vw, 4.5rem);
+    }
+
+    .illustration-circle {
+        width: 320px;
+        height: 320px;
+    }
+
+    .character-placeholder {
+        width: 230px;
+        height: 230px;
+
+        padding: 20px;
+    }
+
+    .placeholder-icon {
+        font-size: 3rem;
+    }
+
+    /*hasta aqui el responsive de hero*/
+
+    .logo-image {
+        height: 55px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 1.7rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .illustration-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .blob {
+        filter: blur(70px);
+    }
+
+    /*hasta aqui el responsive de hero*/
+
+    .logo-image {
+        height: 45px;
+    }
+}
 
 /* ==========================
    PORTFOLIO SECTION
@@ -811,6 +986,36 @@ img {
     justify-content: center;
 }
 
+/*hasta aqui el de trabajos*/
+
+@media (max-width: 992px){
+    .portfolio-grid {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px){
+    .portfolio-section {
+        padding: 90px 0;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        margin-bottom: 50px;
+    }
+
+    .portfolio-info {
+        padding: 24px;
+    }
+
+    .portfolio-info h3 {
+        font-size: 1.3rem;
+    }
+}
+
 /* ==========================
    SERVICES SECTION
 ========================== */
@@ -984,14 +1189,40 @@ img {
     grid-column: span 2;
 }
 
+@media (max-width: 992px){
+    .services-grid {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px){
+    .services-section {
+        padding: 90px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card-featured {
+        grid-column: auto;
+    }
+
+    .service-card {
+        padding: 28px;
+    }
+
+    .service-content h3 {
+        font-size: 1.4rem;
+    }
+}
+
 /* ==========================
    ABOUT SECTION
 ========================== */
 
 .about-section {
     padding: 120px 0;
-
-   overflow-x: hidden;
 
     background: linear-gradient(
         180deg,
@@ -1017,7 +1248,6 @@ img {
 
 .about-image-wrapper {
     position: relative;
-    overflow: hidden;
 }
 
 .about-image-decoration {
@@ -1067,9 +1297,6 @@ img {
 /* ==========================
    CONTENIDO
 ========================== */
-
-.about-content {
-    min-width: 0;
 
 .about-content h2 {
     font-family: "Bebas Neue", sans-serif;
@@ -1162,9 +1389,6 @@ img {
 .about-quote p {
     font-style: italic;
 
-   overflow-wrap: break-world;
-   
-    world-break: break-world;
     color: var(--text);
 
     line-height: 1.8;
@@ -1178,6 +1402,49 @@ img {
     color: var(--primary-dark);
 
     font-weight: 600;
+}
+
+@media (max-width: 992px){
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .about-image-wrapper {
+        max-width: 500px;
+
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px){
+    .about-section {
+        padding: 90px 0;
+    }
+
+    .about-grid {
+        gap: 40px;
+    }
+
+    .about-image-decoration {
+        top: 15px;
+        left: 15px;
+    }
+
+    .about-content h2 {
+        margin: 15px 0 25px;
+    }
+
+    .about-tags {
+        margin: 30px 0;
+    }
+
+    .about-tags span {
+        font-size: 0.85rem;
+
+        padding: 10px 16px;
+    }
 }
 
 /* ==========================
@@ -1380,177 +1647,14 @@ img {
 
     font-size: 0.95rem;
 }
-/* ==========================
-   RESPONSIVE
-========================== */
 
-@media (max-width: 992px) {
-
-    .hero {
-        grid-template-columns: 1fr;
-
-        text-align: center;
-    }
-
-    .hero-content p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .illustration-circle {
-        width: 420px;
-        height: 420px;
-    }
-
-    .nav-links {
-        gap: 25px;
-    }
-
-    .portafolio-grid {
-        gap: 25px;
-    }
-
-    .services-grid {
-        gap: 25px;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-
-        gap: 60px;
-    }
-
-    .about-image-wrapper {
-        max-width: 500px;
-
-        margin: 0 auto;
-    }
-
+@media (max-width: 992px){
     .contact-info {
         gap: 25px;
     }
 }
 
-
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-
-        gap: 18px;
-    }
-
-    .nav-button {
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero {
-        padding: 50px 0;
-    }
-
-    .hero-content h1 {
-        font-size: clamp(3rem, 14vw, 4.5rem);
-    }
-
-    .illustration-circle {
-        width: 320px;
-        height: 320px;
-    }
-
-    .character-placeholder {
-        width: 230px;
-        height: 230px;
-
-        padding: 20px;
-    }
-
-    .placeholder-icon {
-        font-size: 3rem;
-    }
-
-    .logo-image {
-        height: 55px;
-    }
-
-    .portfolio-section {
-        padding: 90px 0;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-header {
-        margin-bottom: 50px;
-    }
-
-    .portfolio-info {
-        padding: 24px;
-    }
-
-    .portfolio-info h3 {
-        font-size: 1.3rem;
-    }
-
-     .services-section {
-        padding: 90px 0;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-card-featured {
-        grid-column: auto;
-    }
-
-    .service-card {
-        padding: 28px;
-    }
-
-    .service-content h3 {
-        font-size: 1.4rem;
-    }
-
-     .about-section {
-        padding: 90px 0;
-    }
-
-    .about-grid {
-        gap: 40px;
-       grid-template-colums: 1fr;
-    }
-
-    .about-image-decoration {
-        top: 10px;
-        left: 10px
-    }
-
-    .about-content h2 {
-        margin: 15px 0 25px;
-    }
-
-    .about-tags {
-        margin: 30px 0;
-    }
-
-    .about-tags span {
-        font-size: 0.85rem;
-
-        padding: 10px 16px;
-    }
-
+@media (max-width: 768px){
     .contact-section {
         padding: 90px 0;
     }
@@ -1579,87 +1683,6 @@ img {
 
     .footer .container {
         flex-direction: column;
-
-        text-align: center;
-    }
-}
-
-
-@media (max-width: 480px) {
-
-    .logo {
-        font-size: 1.7rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
-    .illustration-circle {
-        width: 280px;
-        height: 280px;
-    }
-
-    .blob {
-        filter: blur(70px);
-    }
-
-    .logo-image {
-        height: 45px;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-
-        position: fixed;
-
-        top: 80px;
-        left: 0;
-
-        width: 100%;
-
-        background: rgba(252, 251, 253, 0.98);
-
-        backdrop-filter: blur(12px);
-
-        padding: 30px;
-
-        display: flex;
-        flex-direction: column;
-
-        gap: 25px;
-
-        transform: translateY(-120%);
-
-        opacity: 0;
-
-        pointer-events: none;
-
-        transition: all 0.3s ease;
-
-        z-index: 1000;
-    }
-
-    .nav-links.active {
-        transform: translateY(0);
-
-        opacity: 1;
-
-        pointer-events: auto;
-    }
-
-    .nav-links a {
-        font-size: 1.2rem;
 
         text-align: center;
     }
