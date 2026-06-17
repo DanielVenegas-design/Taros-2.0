@@ -18,7 +18,7 @@ window.addEventListener("scroll", () => {
 ========================== */
 
 const sections = document.querySelectorAll("main section, body > section[id]");
-const navLinks = document.querySelectorAll(".nav-links a");
+const navItems = document.querySelectorAll(".nav-links a");
 
 function updateActiveLink() {
     let currentSection = "";
@@ -35,7 +35,7 @@ function updateActiveLink() {
         }
     });
 
-    navLinks.forEach(link => {
+    navItems.forEach(link => {
         link.classList.remove("active");
 
         const href = link.getAttribute("href");
@@ -150,22 +150,32 @@ if (character) {
 
     });
 
-}
+};
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+    
+    navLinks.classList.toggle("active");
+
+    menuToggle.textContent = navLinks.classList.contains("active")
+        ? "x"
+        : "="
+
+});
 
 document.querySelectorAll(".nav-links a").forEach(link => {
 
     link.addEventListener("click", () => {
 
         navLinks.classList.remove("active");
-
     });
-
 });
 
-
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+window.addEventListener("scroll", () => {
+    if (navLinks.classList.contains("active")) {
+        navLinks.classList.remove("active");
+        menuToggle.textContent = "=";
+    }
 });
